@@ -1,0 +1,519 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EC1641F51C9784EF001D603F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1641F41C9784EF001D603F /* main.m */; };
+		EC1641F81C9784EF001D603F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1641F71C9784EF001D603F /* AppDelegate.m */; };
+		EC1641FB1C9784EF001D603F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1641FA1C9784EF001D603F /* ViewController.m */; };
+		EC1641FE1C9784EF001D603F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC1641FC1C9784EF001D603F /* Main.storyboard */; };
+		EC1642001C9784EF001D603F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC1641FF1C9784EF001D603F /* Assets.xcassets */; };
+		EC1642031C9784EF001D603F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC1642011C9784EF001D603F /* LaunchScreen.storyboard */; };
+		EC16420E1C9784EF001D603F /* ConvertirdorDivisasTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EC16420D1C9784EF001D603F /* ConvertirdorDivisasTests.m */; };
+		EC1642191C9784EF001D603F /* ConvertirdorDivisasUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1642181C9784EF001D603F /* ConvertirdorDivisasUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EC16420A1C9784EF001D603F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC1641E81C9784EE001D603F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC1641EF1C9784EE001D603F;
+			remoteInfo = ConvertirdorDivisas;
+		};
+		EC1642151C9784EF001D603F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC1641E81C9784EE001D603F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC1641EF1C9784EE001D603F;
+			remoteInfo = ConvertirdorDivisas;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EC1641F01C9784EE001D603F /* ConvertirdorDivisas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConvertirdorDivisas.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC1641F41C9784EF001D603F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EC1641F61C9784EF001D603F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EC1641F71C9784EF001D603F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EC1641F91C9784EF001D603F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		EC1641FA1C9784EF001D603F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EC1641FD1C9784EF001D603F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EC1641FF1C9784EF001D603F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EC1642021C9784EF001D603F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EC1642041C9784EF001D603F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC1642091C9784EF001D603F /* ConvertirdorDivisasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConvertirdorDivisasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC16420D1C9784EF001D603F /* ConvertirdorDivisasTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConvertirdorDivisasTests.m; sourceTree = "<group>"; };
+		EC16420F1C9784EF001D603F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC1642141C9784EF001D603F /* ConvertirdorDivisasUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConvertirdorDivisasUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC1642181C9784EF001D603F /* ConvertirdorDivisasUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConvertirdorDivisasUITests.m; sourceTree = "<group>"; };
+		EC16421A1C9784EF001D603F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EC1641ED1C9784EE001D603F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC1642061C9784EF001D603F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC1642111C9784EF001D603F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EC1641E71C9784EE001D603F = {
+			isa = PBXGroup;
+			children = (
+				EC1641F21C9784EE001D603F /* ConvertirdorDivisas */,
+				EC16420C1C9784EF001D603F /* ConvertirdorDivisasTests */,
+				EC1642171C9784EF001D603F /* ConvertirdorDivisasUITests */,
+				EC1641F11C9784EE001D603F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EC1641F11C9784EE001D603F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EC1641F01C9784EE001D603F /* ConvertirdorDivisas.app */,
+				EC1642091C9784EF001D603F /* ConvertirdorDivisasTests.xctest */,
+				EC1642141C9784EF001D603F /* ConvertirdorDivisasUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EC1641F21C9784EE001D603F /* ConvertirdorDivisas */ = {
+			isa = PBXGroup;
+			children = (
+				EC1641F61C9784EF001D603F /* AppDelegate.h */,
+				EC1641F71C9784EF001D603F /* AppDelegate.m */,
+				EC1641F91C9784EF001D603F /* ViewController.h */,
+				EC1641FA1C9784EF001D603F /* ViewController.m */,
+				EC1641FC1C9784EF001D603F /* Main.storyboard */,
+				EC1641FF1C9784EF001D603F /* Assets.xcassets */,
+				EC1642011C9784EF001D603F /* LaunchScreen.storyboard */,
+				EC1642041C9784EF001D603F /* Info.plist */,
+				EC1641F31C9784EE001D603F /* Supporting Files */,
+			);
+			path = ConvertirdorDivisas;
+			sourceTree = "<group>";
+		};
+		EC1641F31C9784EE001D603F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EC1641F41C9784EF001D603F /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EC16420C1C9784EF001D603F /* ConvertirdorDivisasTests */ = {
+			isa = PBXGroup;
+			children = (
+				EC16420D1C9784EF001D603F /* ConvertirdorDivisasTests.m */,
+				EC16420F1C9784EF001D603F /* Info.plist */,
+			);
+			path = ConvertirdorDivisasTests;
+			sourceTree = "<group>";
+		};
+		EC1642171C9784EF001D603F /* ConvertirdorDivisasUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EC1642181C9784EF001D603F /* ConvertirdorDivisasUITests.m */,
+				EC16421A1C9784EF001D603F /* Info.plist */,
+			);
+			path = ConvertirdorDivisasUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EC1641EF1C9784EE001D603F /* ConvertirdorDivisas */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC16421D1C9784EF001D603F /* Build configuration list for PBXNativeTarget "ConvertirdorDivisas" */;
+			buildPhases = (
+				EC1641EC1C9784EE001D603F /* Sources */,
+				EC1641ED1C9784EE001D603F /* Frameworks */,
+				EC1641EE1C9784EE001D603F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ConvertirdorDivisas;
+			productName = ConvertirdorDivisas;
+			productReference = EC1641F01C9784EE001D603F /* ConvertirdorDivisas.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EC1642081C9784EF001D603F /* ConvertirdorDivisasTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC1642201C9784EF001D603F /* Build configuration list for PBXNativeTarget "ConvertirdorDivisasTests" */;
+			buildPhases = (
+				EC1642051C9784EF001D603F /* Sources */,
+				EC1642061C9784EF001D603F /* Frameworks */,
+				EC1642071C9784EF001D603F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC16420B1C9784EF001D603F /* PBXTargetDependency */,
+			);
+			name = ConvertirdorDivisasTests;
+			productName = ConvertirdorDivisasTests;
+			productReference = EC1642091C9784EF001D603F /* ConvertirdorDivisasTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EC1642131C9784EF001D603F /* ConvertirdorDivisasUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC1642231C9784EF001D603F /* Build configuration list for PBXNativeTarget "ConvertirdorDivisasUITests" */;
+			buildPhases = (
+				EC1642101C9784EF001D603F /* Sources */,
+				EC1642111C9784EF001D603F /* Frameworks */,
+				EC1642121C9784EF001D603F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC1642161C9784EF001D603F /* PBXTargetDependency */,
+			);
+			name = ConvertirdorDivisasUITests;
+			productName = ConvertirdorDivisasUITests;
+			productReference = EC1642141C9784EF001D603F /* ConvertirdorDivisasUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EC1641E81C9784EE001D603F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = n0rf3n;
+				TargetAttributes = {
+					EC1641EF1C9784EE001D603F = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					EC1642081C9784EF001D603F = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = EC1641EF1C9784EE001D603F;
+					};
+					EC1642131C9784EF001D603F = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = EC1641EF1C9784EE001D603F;
+					};
+				};
+			};
+			buildConfigurationList = EC1641EB1C9784EE001D603F /* Build configuration list for PBXProject "ConvertirdorDivisas" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EC1641E71C9784EE001D603F;
+			productRefGroup = EC1641F11C9784EE001D603F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EC1641EF1C9784EE001D603F /* ConvertirdorDivisas */,
+				EC1642081C9784EF001D603F /* ConvertirdorDivisasTests */,
+				EC1642131C9784EF001D603F /* ConvertirdorDivisasUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EC1641EE1C9784EE001D603F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC1642031C9784EF001D603F /* LaunchScreen.storyboard in Resources */,
+				EC1642001C9784EF001D603F /* Assets.xcassets in Resources */,
+				EC1641FE1C9784EF001D603F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC1642071C9784EF001D603F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC1642121C9784EF001D603F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EC1641EC1C9784EE001D603F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC1641FB1C9784EF001D603F /* ViewController.m in Sources */,
+				EC1641F81C9784EF001D603F /* AppDelegate.m in Sources */,
+				EC1641F51C9784EF001D603F /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC1642051C9784EF001D603F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC16420E1C9784EF001D603F /* ConvertirdorDivisasTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC1642101C9784EF001D603F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC1642191C9784EF001D603F /* ConvertirdorDivisasUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EC16420B1C9784EF001D603F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC1641EF1C9784EE001D603F /* ConvertirdorDivisas */;
+			targetProxy = EC16420A1C9784EF001D603F /* PBXContainerItemProxy */;
+		};
+		EC1642161C9784EF001D603F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC1641EF1C9784EE001D603F /* ConvertirdorDivisas */;
+			targetProxy = EC1642151C9784EF001D603F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EC1641FC1C9784EF001D603F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC1641FD1C9784EF001D603F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EC1642011C9784EF001D603F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC1642021C9784EF001D603F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EC16421B1C9784EF001D603F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EC16421C1C9784EF001D603F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EC16421E1C9784EF001D603F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ConvertirdorDivisas/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.n0rf3n.ConvertirdorDivisas;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EC16421F1C9784EF001D603F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ConvertirdorDivisas/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.n0rf3n.ConvertirdorDivisas;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		EC1642211C9784EF001D603F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ConvertirdorDivisasTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.n0rf3n.ConvertirdorDivisasTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ConvertirdorDivisas.app/ConvertirdorDivisas";
+			};
+			name = Debug;
+		};
+		EC1642221C9784EF001D603F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ConvertirdorDivisasTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.n0rf3n.ConvertirdorDivisasTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ConvertirdorDivisas.app/ConvertirdorDivisas";
+			};
+			name = Release;
+		};
+		EC1642241C9784EF001D603F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ConvertirdorDivisasUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.n0rf3n.ConvertirdorDivisasUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ConvertirdorDivisas;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		EC1642251C9784EF001D603F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ConvertirdorDivisasUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.n0rf3n.ConvertirdorDivisasUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ConvertirdorDivisas;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EC1641EB1C9784EE001D603F /* Build configuration list for PBXProject "ConvertirdorDivisas" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC16421B1C9784EF001D603F /* Debug */,
+				EC16421C1C9784EF001D603F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC16421D1C9784EF001D603F /* Build configuration list for PBXNativeTarget "ConvertirdorDivisas" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC16421E1C9784EF001D603F /* Debug */,
+				EC16421F1C9784EF001D603F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EC1642201C9784EF001D603F /* Build configuration list for PBXNativeTarget "ConvertirdorDivisasTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC1642211C9784EF001D603F /* Debug */,
+				EC1642221C9784EF001D603F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EC1642231C9784EF001D603F /* Build configuration list for PBXNativeTarget "ConvertirdorDivisasUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC1642241C9784EF001D603F /* Debug */,
+				EC1642251C9784EF001D603F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EC1641E81C9784EE001D603F /* Project object */;
+}
