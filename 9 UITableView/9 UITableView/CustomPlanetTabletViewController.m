@@ -16,35 +16,56 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // Do any additional setup after loading the view.
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    self.planetas = @[@"Mercurio", @"Venus", @"La tierra",@"Júpiter", @"Urano", @"Saturno", @"Neptuno", @"Marte", @"La luna"]; //es igual a => [NSArray Allow] init
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    //arreglo con el nombre de las imagenes,
+    self.imagesPlanetas = @[@"mercurio", @"venus", @"tierra", @"jupiter", @"urano", @"saturno", @"neptuno", @"marte", @"luna"]; //es igual a => [NSArray Allow] init
+}
+
+
+
+//Se esconde la barra
+-(BOOL)prefersStatusBarHidden{
+    return YES;
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
-}
-
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+-(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{ //definira el numero de filas que contendra la tabla.
     
-    // Configure the cell...
+    return self.planetas.count;
+    
+}
+
+-(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath { //Se llama cada vez que se debe mostrar una celda, REtorna lo que se encuentre en cada posición seleccionada
+    
+    //en este metodo se puede acceder a dos variables ROW y SECTION con estas variables se identifica en que sección y esta y que fila se esta moviendo el usuario.
+    
+    NSInteger indice  = indexPath.row; //Se la posicion del planeta
+    
+    //se instancia estatico ya que las celdas se vna a reutilizar, estzs variable se utilizara en todo el hilo de la App
+    static NSString * cellIdentifier = @"PlanetCell"; //Es un identificador estatico que no va a cambiar y hace referencia a la celda o ID de celda
+    
+    //Se utiliza para recuperar una tabla que se reutilizara del propio del UITableView
+    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier]; //aquí s recupera la celda.y modificar
+    
+    NSLog(@"N0rf3n - nombres : %@",self.planetas[indice]);
+    
+    cell.textLabel.text = self.planetas[indice];
+    
+    NSLog(@"N0rf3n - imagenes : %@",self.imagesPlanetas[indice]);
+    //Se agrega una imagen a la celda
+    cell.imageView.image = [UIImage imageNamed:self.imagesPlanetas[indice]];//agrega una imagen a la celda
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
