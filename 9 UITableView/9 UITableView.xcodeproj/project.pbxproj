@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6C37B68223345B1800C4E0EE /* CustomPlanetTabletViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C37B68123345B1800C4E0EE /* CustomPlanetTabletViewController.m */; };
+		6C37B6852334709500C4E0EE /* PlanetCellTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C37B6842334709500C4E0EE /* PlanetCellTableView.m */; };
 		6CDC6CA82333173500CAC0BE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDC6CA72333173500CAC0BE /* AppDelegate.m */; };
 		6CDC6CAB2333173500CAC0BE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDC6CAA2333173500CAC0BE /* ViewController.m */; };
 		6CDC6CAE2333173500CAC0BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CDC6CAC2333173500CAC0BE /* Main.storyboard */; };
@@ -38,6 +39,8 @@
 /* Begin PBXFileReference section */
 		6C37B68023345B1800C4E0EE /* CustomPlanetTabletViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomPlanetTabletViewController.h; sourceTree = "<group>"; };
 		6C37B68123345B1800C4E0EE /* CustomPlanetTabletViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomPlanetTabletViewController.m; sourceTree = "<group>"; };
+		6C37B6832334709500C4E0EE /* PlanetCellTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlanetCellTableView.h; sourceTree = "<group>"; };
+		6C37B6842334709500C4E0EE /* PlanetCellTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlanetCellTableView.m; sourceTree = "<group>"; };
 		6CDC6CA32333173500CAC0BE /* 9 UITableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "9 UITableView.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CDC6CA62333173500CAC0BE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6CDC6CA72333173500CAC0BE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -115,6 +118,8 @@
 				6CDC6CB52333173700CAC0BE /* main.m */,
 				6C37B68023345B1800C4E0EE /* CustomPlanetTabletViewController.h */,
 				6C37B68123345B1800C4E0EE /* CustomPlanetTabletViewController.m */,
+				6C37B6832334709500C4E0EE /* PlanetCellTableView.h */,
+				6C37B6842334709500C4E0EE /* PlanetCellTableView.m */,
 			);
 			path = "9 UITableView";
 			sourceTree = "<group>";
@@ -269,6 +274,7 @@
 			files = (
 				6CDC6CAB2333173500CAC0BE /* ViewController.m in Sources */,
 				6CDC6CB62333173700CAC0BE /* main.m in Sources */,
+				6C37B6852334709500C4E0EE /* PlanetCellTableView.m in Sources */,
 				6CDC6CA82333173500CAC0BE /* AppDelegate.m in Sources */,
 				6C37B68223345B1800C4E0EE /* CustomPlanetTabletViewController.m in Sources */,
 			);
