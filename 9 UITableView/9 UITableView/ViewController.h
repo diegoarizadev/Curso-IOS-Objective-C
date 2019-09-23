@@ -17,6 +17,8 @@
 @property(strong, nonatomic)NSArray * planetas; //Se declara el arreglo globarl e inmutable, 
 @property(strong, nonatomic)NSArray * imagesPlanetas; //Se declara el arreglo globarl e inmutable,
 
+@property(strong, nonatomic)NSArray * descripcion;
+
 
 
 @end

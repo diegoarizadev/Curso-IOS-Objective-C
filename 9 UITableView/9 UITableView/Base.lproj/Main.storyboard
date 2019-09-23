@@ -29,22 +29,22 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pb7-Mr-hq6">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pb7-Mr-hq6">
                                                     <rect key="frame" x="0.0" y="0.0" width="99.5" height="99.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="Pb7-Mr-hq6" secondAttribute="height" multiplier="1:1" id="j4J-yA-c1F"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iC5-jk-NPc">
-                                                    <rect key="frame" x="107.5" y="8" width="298.5" height="38"/>
+                                                    <rect key="frame" x="107.5" y="4" width="298.5" height="42"/>
                                                     <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="1" translatesAutoresizingMaskIntoConstraints="NO" id="YFG-pk-DMg">
-                                                    <rect key="frame" x="107.5" y="54" width="298.5" height="37.5"/>
+                                                    <rect key="frame" x="107.5" y="50" width="298.5" height="41.5"/>
                                                     <string key="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it </string>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -54,9 +54,9 @@
                                                 <constraint firstItem="YFG-pk-DMg" firstAttribute="height" secondItem="iC5-jk-NPc" secondAttribute="height" id="2b5-pG-BOo"/>
                                                 <constraint firstAttribute="trailing" secondItem="iC5-jk-NPc" secondAttribute="trailing" constant="8" id="7jY-Zd-kTZ"/>
                                                 <constraint firstAttribute="trailing" secondItem="YFG-pk-DMg" secondAttribute="trailing" constant="8" id="V6F-2P-zIQ"/>
-                                                <constraint firstItem="iC5-jk-NPc" firstAttribute="top" secondItem="Zvh-dy-hgt" secondAttribute="top" constant="8" id="VKV-Rr-zma"/>
+                                                <constraint firstItem="iC5-jk-NPc" firstAttribute="top" secondItem="Zvh-dy-hgt" secondAttribute="top" constant="4" id="VKV-Rr-zma"/>
                                                 <constraint firstAttribute="bottom" secondItem="YFG-pk-DMg" secondAttribute="bottom" constant="8" id="Xkl-Od-bjk"/>
-                                                <constraint firstItem="YFG-pk-DMg" firstAttribute="top" secondItem="iC5-jk-NPc" secondAttribute="bottom" constant="8" id="a8q-j7-NJs"/>
+                                                <constraint firstItem="YFG-pk-DMg" firstAttribute="top" secondItem="iC5-jk-NPc" secondAttribute="bottom" constant="4" id="a8q-j7-NJs"/>
                                                 <constraint firstItem="YFG-pk-DMg" firstAttribute="leading" secondItem="Pb7-Mr-hq6" secondAttribute="trailing" constant="8" id="dC5-zd-so1"/>
                                                 <constraint firstAttribute="bottom" secondItem="Pb7-Mr-hq6" secondAttribute="bottom" id="fFv-mx-Gt6"/>
                                                 <constraint firstItem="Pb7-Mr-hq6" firstAttribute="leading" secondItem="Zvh-dy-hgt" secondAttribute="leading" id="gms-4N-AGH"/>
