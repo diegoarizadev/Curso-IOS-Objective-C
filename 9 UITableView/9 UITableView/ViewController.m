@@ -131,7 +131,7 @@
     [self.imagesPlanetas removeObjectAtIndex:indexPath.row];
     [self.descripcion removeObjectAtIndex:indexPath.row];
     
-    [tableView reloadData]; //se volver a cargar la tabla en la vista 
+    [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade]; //se volver a cargar la tabla en la vista
     
 }
 
