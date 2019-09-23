@@ -11,6 +11,11 @@
 
 @interface ViewController ()
 
+//Aqui se declaran variables unicamente para este view controler
+{
+    BOOL  planetasCheck[9]; // se debe instancias el tamaño del arreglo.
+}
+
 @end
 
 @implementation ViewController
@@ -62,6 +67,12 @@
     //Se agrega una imagen a la celda
     cell.imgViewPlanet.image = [UIImage imageNamed:self.imagesPlanetas[indice]];//agrega una imagen a la celda
     
+    if (planetasCheck[indexPath.row]) {
+      cell.accessoryType = UITableViewCellAccessoryCheckmark; //Con esto se agrega el Accesory type de leido.
+    }else{
+    cell.accessoryType = UITableViewCellAccessoryDetailButton; //Con esto se agrega el Accesory type de leido.
+    }
+    
     return cell;
 }
 
@@ -78,12 +89,20 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     NSLog(@"Se selecciona la fila %li",indexPath.row);
-    [self showAlertWhitMessage:indexPath]; //Se llama a la función para mostrar el mensaje
+    
     
     UITableViewCell *celda = [tableView cellForRowAtIndexPath:indexPath];//Se recupera la celda seleccionada
-    celda.accessoryType = UITableViewCellAccessoryCheckmark; //Con esto se agrega el Accesory type
-    
-    
+
+    if (planetasCheck[indexPath.row]) {
+        celda.accessoryType = UITableViewCellAccessoryDetailButton;
+        planetasCheck[indexPath.row] = NO; //Se almacena en el arreglo la posición del arreglo en el cual el usuario ha leido el contenido.
+    }else{
+        
+        [self showAlertWhitMessage:indexPath]; //Se llama a la función para mostrar el mensaje
+        
+        planetasCheck[indexPath.row] = YES; //Se almacena en el arreglo la posición del arreglo en el cual el usuario ha leido el contenido.
+        celda.accessoryType = UITableViewCellAccessoryCheckmark; //Con esto se agrega el Accesory type de leido.
+    }
 }
 
 
