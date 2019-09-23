@@ -68,7 +68,10 @@
 #pragma mark - MEtodos del UITableVIewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{//Metodo para ajustar la altura de la celda.
     
-    return 100;
+    //Identificar el tamaño de la pantalla
+    CGFloat altura = self.view.frame.size.height; //toda la zona que ocupa la vista.
+    
+    return altura/8.7;//el valor 8.35 es la cantidad de celdas que ahora se mostraran en la pantalla ""response""
 }
 
 //Obtener la seleccion de la tabla.
