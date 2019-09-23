@@ -21,9 +21,9 @@
 //UITableViewDataSource esta es la unión entre los datos y la tabla.
 //UITableViewDelegate se encarga de como mostrar los datos en la tabla, no por ejemplo, este delago permite, cambiar las dimensiones, agregar footer y demas,
 
-@property(strong, nonatomic)NSArray * planetas; //Se declara el arreglo globarl e inmutable, 
-@property(strong, nonatomic)NSArray * imagesPlanetas; //Se declara el arreglo globarl e inmutable,
-@property(strong, nonatomic)NSArray * descripcion;
+@property(strong, nonatomic)NSMutableArray * planetas; //Se declara el arreglo globarl e inmutable,
+@property(strong, nonatomic)NSMutableArray * imagesPlanetas; //Se declara el arreglo globarl e inmutable,
+@property(strong, nonatomic)NSMutableArray * descripcion;
 
 
 
