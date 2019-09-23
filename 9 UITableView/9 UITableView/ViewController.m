@@ -73,7 +73,25 @@
 
 //Obtener la seleccion de la tabla.
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
     NSLog(@"Se selecciona la fila %li",indexPath.row);
+    
+    NSString * planetaSeleccionado = [NSString stringWithFormat:@"%@ : %@", @"es", self.planetas[indexPath.row]];
+    
+    
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Planeta Seleccionado"
+                                                                   message:planetaSeleccionado
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                          handler:^(UIAlertAction * action) {
+                                                              
+                                                          }];
+    
+    [alert addAction:defaultAction];
+    
+    [self presentViewController:alert animated:YES completion:nil];
+    
     
 }
 
