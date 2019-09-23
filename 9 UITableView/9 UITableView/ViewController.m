@@ -71,4 +71,10 @@
     return 100;
 }
 
+//Obtener la seleccion de la tabla.
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSLog(@"Se selecciona la fila %li",indexPath.row);
+    
+}
+
     @end
