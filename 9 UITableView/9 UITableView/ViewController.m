@@ -78,12 +78,19 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     NSLog(@"Se selecciona la fila %li",indexPath.row);
+    [self showAlertWhitMessage:indexPath]; //Se llama a la función para mostrar el mensaje
     
-    NSString * planetaSeleccionado = [NSString stringWithFormat:@"%@ : %@", @"es", self.planetas[indexPath.row]];
+    UITableViewCell *celda = [tableView cellForRowAtIndexPath:indexPath];//Se recupera la celda seleccionada
+    celda.accessoryType = UITableViewCellAccessoryCheckmark; //Con esto se agrega el Accesory type
     
     
-    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Planeta Seleccionado"
-                                                                   message:planetaSeleccionado
+}
+
+
+-(void)showAlertWhitMessage:( NSIndexPath *)indexPath{
+    
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:self.planetas[indexPath.row]
+                                                                   message:self.descripcion[indexPath.row]
                                                             preferredStyle:UIAlertControllerStyleAlert];
     
     UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
@@ -94,7 +101,6 @@
     [alert addAction:defaultAction];
     
     [self presentViewController:alert animated:YES completion:nil];
-    
     
 }
 
