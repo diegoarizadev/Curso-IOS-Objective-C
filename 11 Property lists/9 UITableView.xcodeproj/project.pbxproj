@@ -89,7 +89,6 @@
 		6CD418072339BED80062FBA7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				6CD4180A2339BF0A0062FBA7 /* planetas.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -117,6 +116,7 @@
 		6CDC6CA52333173500CAC0BE /* 9 UITableView */ = {
 			isa = PBXGroup;
 			children = (
+				6CD4180A2339BF0A0062FBA7 /* planetas.plist */,
 				6CD418072339BED80062FBA7 /* Resources */,
 				6CDC6CA62333173500CAC0BE /* AppDelegate.h */,
 				6CDC6CA72333173500CAC0BE /* AppDelegate.m */,

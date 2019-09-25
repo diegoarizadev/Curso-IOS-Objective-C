@@ -26,34 +26,18 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.planetas =[@[@"Mercurio", @"Venus", @"La tierra",@"Júpiter", @"Urano", @"Saturno", @"Neptuno", @"Marte", @"La luna"] mutableCopy]; //es igual a => [NSArray Allow] init
     
-    //al agregar mutableCopy se convierte un objecto que era estatico o no mutable.. a un objecto mutable o editable
+    NSString * path = [[NSBundle mainBundle] pathForResource:@"planetas" ofType:@"plist"]; //ubica el recurso del plist
+    NSLog(@"N0rf3n la ruta es : %@ ", path);
     
-    //Se crean los diccionarios
-    self.imagesPlanetas = [@{@"Mercurio":@"mercurio",
-                             @"Venus":@"venus",
-                             @"La tierra":@"tierra",
-                             @"Júpiter":@"jupiter",
-                             @"Urano":@"urano",
-                             @"Saturno":@"saturno",
-                             @"Neptuno":@"neptuno",
-                             @"Marte":@"marte",
-                             @"La luna":@"luna"}mutableCopy]; //es igual a => [NSArray Allow] init
+    NSDictionary * diccionario = [[NSDictionary alloc] initWithContentsOfFile:path]; //leer el diccionar del archivo plist
     
+    //recuperar la información de los diccionarios que tiene el plist.
+    self.planetas = [diccionario[@"nombres"] mutableCopy];
     
-    
-    self.descripcion =[@{@"Mercurio":@"El planeta más pequeño de todos",
-                         @"Venus":@"Tamaño similiar al de la tierra",
-                         @"La tierra":@"Unico planeta con vida",
-                         @"La luna":@"Crateres visibles a simple vista",
-                         @"Urano":@"los años duran el doble",
-                         @"Saturno":@"Tine una tormenta siempre estacionaria",
-                         @"Neptuno":@"Tiene anillos de gas y polvo",
-                         @"Marte":@"Contiene mucho metano en su atmósfera",
-                         @"Júpiter":@"El planeta más alejado del sol"
-                         }mutableCopy];
-    
+    self.imagesPlanetas = [diccionario[@"imagenes"] mutableCopy];
+
+    self.descripcion =[diccionario[@"descripciones"] mutableCopy];//Se mantiene mutable ¡debido a que se puede eliminar desde la vista.
     
 }
 
@@ -79,15 +63,17 @@
     //Se utiliza para recuperar una tabla que se reutilizara del propio del UITableView
     PlanetCellTableView * cell = (PlanetCellTableView*)[tableView dequeueReusableCellWithIdentifier:cellIdentifier]; //aquí s recupera la celda.y modificar
     
-    NSLog(@"N0rf3n - nombres : %@",self.planetas[indice]);
+    NSLog(@"N0rf3n - nombre : %@",self.planetas[indice]);
     
     cell.lblTitle.text = self.planetas[indice];
     
-    cell.lblDescription.text = self.descripcion[self.planetas[indice]];
+    NSLog(@"N0rf3n - descripcion : %@",self.descripcion[indice]);
     
-    NSLog(@"N0rf3n - imagenes : %@",self.imagesPlanetas[self.planetas[indice]]);
+    cell.lblDescription.text = self.descripcion[indice];
+    
+    NSLog(@"N0rf3n - imagenes : %@",self.imagesPlanetas[indice]);
     //Se agrega una imagen a la celda
-    cell.imgViewPlanet.image = [UIImage imageNamed:self.imagesPlanetas[self.planetas[indice]]];//agrega una imagen a la celda
+    cell.imgViewPlanet.image = [UIImage imageNamed:self.imagesPlanetas[indice]];//agrega una imagen a la celda
     
     if (planetasCheck[indexPath.row]) {
       cell.accessoryType = UITableViewCellAccessoryCheckmark; //Con esto se agrega el Accesory type de leido.
@@ -114,6 +100,7 @@
     
     
     UITableViewCell *celda = [tableView cellForRowAtIndexPath:indexPath];//Se recupera la celda seleccionada
+    
 
     if (planetasCheck[indexPath.row]) {
         celda.accessoryType = UITableViewCellAccessoryDetailButton;
@@ -131,7 +118,7 @@
 -(void)showAlertWhitMessage:( NSIndexPath *)indexPath{
     
     UIAlertController* alert = [UIAlertController alertControllerWithTitle:self.planetas[indexPath.row]
-                                                                   message:self.descripcion[self.planetas[indexPath.row]]
+                                                                   message:self.descripcion[indexPath.row]
                                                             preferredStyle:UIAlertControllerStyleAlert];
     
     UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
@@ -147,12 +134,12 @@
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{ //indicara al usuario que se va a modificar una celda, cuando este metodo se ejecute por el delegado, se mostrar el icono de eliminar.
     
-    NSString * planetaBorrado = self.planetas[indexPath.row];//obtiene la llave del diccionario
     [self.planetas removeObjectAtIndex:indexPath.row];
-    [self.imagesPlanetas removeObjectForKey:planetaBorrado]; //metodo para elininar del diccionario
-    [self.descripcion removeObjectForKey:planetaBorrado];
+    [self.imagesPlanetas removeObjectAtIndex:indexPath.row];
+    [self.descripcion removeObjectAtIndex:indexPath.row];
     
     [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade]; //se volver a cargar la tabla en la vista
+    
     
 }
 

@@ -22,8 +22,8 @@
 //UITableViewDelegate se encarga de como mostrar los datos en la tabla, no por ejemplo, este delago permite, cambiar las dimensiones, agregar footer y demas,
 
 @property(strong, nonatomic)NSMutableArray * planetas; //Se declara el arreglo globarl e inmutable,
-@property(strong, nonatomic)NSMutableDictionary * imagesPlanetas; //Se declara el arreglo globarl e inmutable,
-@property(strong, nonatomic)NSMutableDictionary * descripcion;
+@property(strong, nonatomic)NSMutableArray * imagesPlanetas; //Se declara el arreglo globarl e inmutable,
+@property(strong, nonatomic)NSMutableArray * descripcion;
 
 
 
