@@ -8,12 +8,15 @@
 
 #import "ViewController.h"
 #import "PlanetCellTableView.h"
+#import "Planeta.h"
 
 @interface ViewController ()
 
 //Aqui se declaran variables unicamente para este view controler
 {
     BOOL  planetasCheck[9]; // se debe instancias el tamaño del arreglo.
+    //2. crear el objecto privado para la clase.
+    NSMutableArray * planetas;
 }
 
 @end
@@ -30,15 +33,62 @@
     NSString * path = [[NSBundle mainBundle] pathForResource:@"planetas" ofType:@"plist"]; //ubica el recurso del plist
     NSLog(@"N0rf3n la ruta es : %@ ", path);
     
-    NSDictionary * diccionario = [[NSDictionary alloc] initWithContentsOfFile:path]; //leer el diccionar del archivo plist
+    Planeta * mercurio    = [Planeta new]; //3. inicializar el objecto., [Planeta new]; es lo mismo que [[Planeta alloc] init];
+    mercurio.nombre       = @"Mercurio";
+    mercurio.nombreImagen = @"mercurio";
+    mercurio.descripcion  = @"El planeta más peuqeño de todos.";
     
-    //recuperar la información de los diccionarios que tiene el plist.
-    self.planetas = [diccionario[@"nombres"] mutableCopy];
+    Planeta * venus    = [Planeta new]; //3. inicializar el objecto., [Planeta new]; es lo mismo que [[Planeta alloc] init];
+    venus.nombre       = @"Venus";
+    venus.nombreImagen = @"venus";
+    venus.descripcion  = @"Tamaño similar al de la tierra.";
     
-    self.imagesPlanetas = [diccionario[@"imagenes"] mutableCopy];
+    Planeta * tierra    = [Planeta new]; //3. inicializar el objecto., [Planeta new]; es lo mismo que [[Planeta alloc] init];
+    tierra.nombre       = @"La tierra";
+    tierra.nombreImagen = @"tierra";
+    tierra.descripcion  = @"El único planeta con vida.";
+    
+    Planeta * luna    = [Planeta new]; //3. inicializar el objecto., [Planeta new]; es lo mismo que [[Planeta alloc] init];
+    luna.nombre       = @"La luna";
+    luna.nombreImagen = @"luna";
+    luna.descripcion  = @"Tiene cráteres visibles a simple vista.";
+    
+    Planeta * marte    = [Planeta new]; //3. inicializar el objecto., [Planeta new]; es lo mismo que [[Planeta alloc] init];
+    marte.nombre       = @"Marte";
+    marte.nombreImagen = @"marte";
+    marte.descripcion  = @"El plameta rojo del sistema y los años duran el doble.";
+    
+    Planeta * jupiter    = [Planeta new]; //3. inicializar el objecto., [Planeta new]; es lo mismo que [[Planeta alloc] init];
+    jupiter.nombre       = @"Júpìter";
+    jupiter.nombreImagen = @"jupiter";
+    jupiter.descripcion  = @"Tiene una tormenta simpre estacionaria.";
+    
+    Planeta * saturno    = [Planeta new]; //3. inicializar el objecto., [Planeta new]; es lo mismo que [[Planeta alloc] init];
+    saturno.nombre       = @"Saturno";
+    saturno.nombreImagen = @"saturno";
+    saturno.descripcion  = @"Tiene anillos de gas y polvo.";
+    
+    Planeta * urano    = [Planeta new]; //3. inicializar el objecto., [Planeta new]; es lo mismo que [[Planeta alloc] init];
+    urano.nombre       = @"Urano";
+    urano.nombreImagen = @"urano";
+    urano.descripcion  = @"Contiene mucho metano en su atmosfera";
+    
+    Planeta * neptuno    = [Planeta new]; //3. inicializar el objecto., [Planeta new]; es lo mismo que [[Planeta alloc] init];
+    neptuno.nombre       = @"Neptuno";
+    neptuno.nombreImagen = @"neptuno";
+    neptuno.descripcion  = @"el planeta mas alejado del sol";
+    
+    Planeta * pluton    = [Planeta new]; //3. inicializar el objecto., [Planeta new]; es lo mismo que [[Planeta alloc] init];
+    pluton.nombre       = @"Plutón";
+    pluton.nombreImagen = @"tierra";
+    pluton.descripcion  = @"El antiguo planeta que ya no lo es.";
+    
+    
+    //ahora se debe crear el arreglo mutable.
+    
+    planetas = [[NSArray arrayWithObjects:mercurio,venus,tierra,luna,marte,jupiter,saturno,urano,neptuno,pluton, nil] mutableCopy];
 
-    self.descripcion =[diccionario[@"descripciones"] mutableCopy];//Se mantiene mutable ¡debido a que se puede eliminar desde la vista.
-    
+
 }
 
 
@@ -47,7 +97,7 @@
 #pragma mark - Metodos del UITableViewDataSource
 -(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{ //definira el numero de filas que contendra la tabla.
     
-    return self.planetas.count;
+    return [planetas count];
 
 }
 
@@ -60,20 +110,22 @@
     //se instancia estatico ya que las celdas se vna a reutilizar, estzs variable se utilizara en todo el hilo de la App
     static NSString * cellIdentifier = @"PlanetCell"; //Es un identificador estatico que no va a cambiar y hace referencia a la celda o ID de celda
     
+    Planeta * currentPlanet = planetas[indice]; //Recupera el planeta con el cual se va a trabajar
+    
     //Se utiliza para recuperar una tabla que se reutilizara del propio del UITableView
     PlanetCellTableView * cell = (PlanetCellTableView*)[tableView dequeueReusableCellWithIdentifier:cellIdentifier]; //aquí s recupera la celda.y modificar
     
-    NSLog(@"N0rf3n - nombre : %@",self.planetas[indice]);
+    NSLog(@"N0rf3n - nombre : %@", currentPlanet.nombre);
     
-    cell.lblTitle.text = self.planetas[indice];
+    cell.lblTitle.text = currentPlanet.nombre;
+
+    NSLog(@"N0rf3n - descripcion : %@",currentPlanet.descripcion);
     
-    NSLog(@"N0rf3n - descripcion : %@",self.descripcion[indice]);
+    cell.lblDescription.text = currentPlanet.descripcion;
     
-    cell.lblDescription.text = self.descripcion[indice];
-    
-    NSLog(@"N0rf3n - imagenes : %@",self.imagesPlanetas[indice]);
+    NSLog(@"N0rf3n - imagenes : %@",currentPlanet.nombreImagen);
     //Se agrega una imagen a la celda
-    cell.imgViewPlanet.image = [UIImage imageNamed:self.imagesPlanetas[indice]];//agrega una imagen a la celda
+    cell.imgViewPlanet.image = [UIImage imageNamed:currentPlanet.nombreImagen];//agrega una imagen a la celda
     
     if (planetasCheck[indexPath.row]) {
       cell.accessoryType = UITableViewCellAccessoryCheckmark; //Con esto se agrega el Accesory type de leido.
@@ -97,10 +149,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     NSLog(@"Se selecciona la fila %li",indexPath.row);
-    
-    
+
     UITableViewCell *celda = [tableView cellForRowAtIndexPath:indexPath];//Se recupera la celda seleccionada
-    
 
     if (planetasCheck[indexPath.row]) {
         celda.accessoryType = UITableViewCellAccessoryDetailButton;
@@ -117,8 +167,10 @@
 
 -(void)showAlertWhitMessage:( NSIndexPath *)indexPath{
     
-    UIAlertController* alert = [UIAlertController alertControllerWithTitle:self.planetas[indexPath.row]
-                                                                   message:self.descripcion[indexPath.row]
+    Planeta * currentPlanet = planetas[indexPath.row]; //Recupera el planeta con el cual se va a trabajar
+    
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:currentPlanet.nombre
+                                                                   message:currentPlanet.descripcion
                                                             preferredStyle:UIAlertControllerStyleAlert];
     
     UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
@@ -134,10 +186,8 @@
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{ //indicara al usuario que se va a modificar una celda, cuando este metodo se ejecute por el delegado, se mostrar el icono de eliminar.
     
-    [self.planetas removeObjectAtIndex:indexPath.row];
-    [self.imagesPlanetas removeObjectAtIndex:indexPath.row];
-    [self.descripcion removeObjectAtIndex:indexPath.row];
-    
+    [planetas removeObjectAtIndex:indexPath.row];
+
     [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade]; //se volver a cargar la tabla en la vista
     
     
