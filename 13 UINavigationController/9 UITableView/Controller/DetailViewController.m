@@ -20,6 +20,8 @@
     
     
     [self.labelPlanet setText:self.planeta.nombre];
+    [self.lblDescripcion setText:self.planeta.descripcion];
+    [self.imgPlaneta setImage:[UIImage imageNamed:self.planeta.nombreImagen]];
     
 }
 

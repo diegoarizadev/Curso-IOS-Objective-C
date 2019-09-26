@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface DetailViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UILabel *labelPlanet;
+@property (strong, nonatomic) IBOutlet UILabel *lblDescripcion;
+@property (strong, nonatomic) IBOutlet UIImageView *imgPlaneta;
 
 @property(strong, nonatomic) Planeta * planeta;
 

@@ -37,7 +37,7 @@
     Planeta * mercurio    = [Planeta new]; //3. inicializar el objecto., [Planeta new]; es lo mismo que [[Planeta alloc] init];
     mercurio.nombre       = @"Mercurio";
     mercurio.nombreImagen = @"mercurio";
-    mercurio.descripcion  = @"El planeta más peuqeño de todos.";
+    mercurio.descripcion  = @"El planeta más pequeño de todos.";
     
     Planeta * venus    = [Planeta new]; //3. inicializar el objecto., [Planeta new]; es lo mismo que [[Planeta alloc] init];
     venus.nombre       = @"Venus";
@@ -57,7 +57,7 @@
     Planeta * marte    = [Planeta new]; //3. inicializar el objecto., [Planeta new]; es lo mismo que [[Planeta alloc] init];
     marte.nombre       = @"Marte";
     marte.nombreImagen = @"marte";
-    marte.descripcion  = @"El plameta rojo del sistema y los años duran el doble.";
+    marte.descripcion  = @"El planeta rojo del sistema y los años duran el doble.";
     
     Planeta * jupiter    = [Planeta new]; //3. inicializar el objecto., [Planeta new]; es lo mismo que [[Planeta alloc] init];
     jupiter.nombre       = @"Júpìter";
@@ -158,7 +158,7 @@
         planetasCheck[indexPath.row] = NO; //Se almacena en el arreglo la posición del arreglo en el cual el usuario ha leido el contenido.
     }else{
         
-        [self showAlertWhitMessage:indexPath]; //Se llama a la función para mostrar el mensaje
+        //[self showAlertWhitMessage:indexPath]; //Se llama a la función para mostrar el mensaje
         
         planetasCheck[indexPath.row] = YES; //Se almacena en el arreglo la posición del arreglo en el cual el usuario ha leido el contenido.
         celda.accessoryType = UITableViewCellAccessoryCheckmark; //Con esto se agrega el Accesory type de leido.
