@@ -10,6 +10,7 @@
 
 @interface ViewController : UIViewController <UITableViewDataSource, UITableViewDelegate> //los obejctos entre los <> son delegados.
 
+@property (strong, nonatomic) IBOutlet UITableView *tablaPlanetas;
 
 @end
 

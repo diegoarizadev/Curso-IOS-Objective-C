@@ -69,7 +69,7 @@
                                             <outlet property="imgViewPlanet" destination="Pb7-Mr-hq6" id="IeU-v1-jvy"/>
                                             <outlet property="lblDescription" destination="YFG-pk-DMg" id="8GX-GM-HxN"/>
                                             <outlet property="lblTitle" destination="iC5-jk-NPc" id="J4j-Xy-zDX"/>
-                                            <segue destination="wd6-3D-woV" kind="show" id="fit-2M-7Pl"/>
+                                            <segue destination="wd6-3D-woV" kind="show" identifier="seguePlaneta" id="fit-2M-7Pl"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -89,25 +89,40 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Planetas" id="6CW-aa-hz1"/>
+                    <connections>
+                        <outlet property="tablaPlanetas" destination="pLf-np-v3c" id="TCk-37-YTl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="133.92857142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="ywT-LP-usz">
             <objects>
-                <viewController id="wd6-3D-woV" sceneMemberID="viewController">
+                <viewController id="wd6-3D-woV" customClass="DetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="u5Q-XT-O1O">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAB-cs-FMV">
+                                <rect key="frame" x="39" y="130" width="337" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="ab9-04-NAE"/>
                     </view>
+                    <connections>
+                        <outlet property="labelPlanet" destination="zAB-cs-FMV" id="lD9-Li-enQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9l9-to-BV0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1987" y="134"/>
+            <point key="canvasLocation" x="1986.9565217391305" y="133.92857142857142"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Aan-wl-v7b">

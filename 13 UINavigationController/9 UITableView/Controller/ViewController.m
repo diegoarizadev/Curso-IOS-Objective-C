@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "PlanetCellTableView.h"
 #import "Planeta.h"
+#import "DetailViewController.h"
 
 @interface ViewController ()
 
@@ -190,6 +191,22 @@
 
     [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade]; //se volver a cargar la tabla en la vista
     
+    
+}
+
+//Como se esta pasando de información de una pantalla a otra, es necesario pasar la información de un ViewController a otro con un segue
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    
+    //si se tiene n Segues con una estructura de IF se podran controlar las acciones para cada uno.
+    if ([segue.identifier isEqualToString:@"seguePlaneta"]) {
+        NSIndexPath * indexPlaneta = [self.tablaPlanetas indexPathForSelectedRow]; //Se recupera el indexPath de la seleccion de la tabla
+        Planeta * planetaSegue = planetas[indexPlaneta.row]; //Se captura el planeta seleccionado
+        
+        //ahora se debe enviar la información al Destinatario o Viewcontroller del detalle.
+        DetailViewController *dvc = segue.destinationViewController;
+        dvc.planeta = planetaSegue; //Se le envia el objecto al viewcontroller.
+    }
     
 }
 
