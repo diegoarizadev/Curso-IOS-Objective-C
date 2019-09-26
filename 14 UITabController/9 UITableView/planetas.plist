@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>descripciones</key>
+	<array>
+		<string>El planeta más alejado del sol</string>
+		<string>Contiene mucho metano en su atmósfera</string>
+		<string>Tiene anillos de gas y polvo</string>
+		<string>Tiene una tormenta siempre estacionaria</string>
+		<string>los años duran el doble</string>
+		<string>Crateres visibles a simple vista</string>
+		<string>Único planeta con vida</string>
+		<string>Tamaño similiar al de la tierra</string>
+		<string>El planeta más pequeño de todos</string>
+	</array>
+	<key>imagenes</key>
+	<array>
+		<string>luna</string>
+		<string>marte</string>
+		<string>neptuno</string>
+		<string>saturno</string>
+		<string>urano</string>
+		<string>jupiter</string>
+		<string>tierra</string>
+		<string>venus</string>
+		<string>mercurio</string>
+	</array>
+	<key>nombres</key>
+	<array>
+		<string>La luna</string>
+		<string>Marte</string>
+		<string>Neptuno</string>
+		<string>Saturno</string>
+		<string>Urano</string>
+		<string>Júpiter</string>
+		<string>La tierra</string>
+		<string>Venus</string>
+		<string>Mercurio</string>
+	</array>
+</dict>
+</plist>
