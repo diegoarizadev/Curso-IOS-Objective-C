@@ -156,7 +156,7 @@
         <scene sceneID="Aan-wl-v7b">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Nos-09-Pty" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Planetas" badgeValue="1" id="o8D-bd-q8p"/>
+                    <tabBarItem key="tabBarItem" title="Planetas" image="book-cover-7.png" badgeValue="1" id="o8D-bd-q8p"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6Ef-nx-dSH">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -171,27 +171,46 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="133.92857142857142"/>
         </scene>
-        <!--Otra-->
+        <!--Instagram-->
         <scene sceneID="G3B-7n-aS6">
             <objects>
-                <viewController id="T6H-tL-hyV" sceneMemberID="viewController">
+                <viewController id="T6H-tL-hyV" customClass="InstagramController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JTU-8z-TlP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ztf-ug-711">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ztf-ug-711" firstAttribute="leading" secondItem="SB0-io-VUi" secondAttribute="leading" id="1OL-I9-pyq"/>
+                            <constraint firstItem="ztf-ug-711" firstAttribute="top" secondItem="SB0-io-VUi" secondAttribute="top" id="Jgh-5W-bim"/>
+                            <constraint firstItem="SB0-io-VUi" firstAttribute="bottom" secondItem="ztf-ug-711" secondAttribute="bottom" id="R8c-p3-d14"/>
+                            <constraint firstItem="SB0-io-VUi" firstAttribute="trailing" secondItem="ztf-ug-711" secondAttribute="trailing" id="o9l-7h-cxF"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="SB0-io-VUi"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Otra" id="scF-xe-s2P"/>
+                    <tabBarItem key="tabBarItem" title="Instagram" image="business-bag-7.png" id="scF-xe-s2P"/>
+                    <connections>
+                        <outlet property="instagramWeb" destination="ztf-ug-711" id="TnG-qf-dZp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oGu-tB-3Q7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-665" y="879"/>
         </scene>
-        <!--Más-->
+        <!--Web Local-->
         <scene sceneID="zgg-Ub-izJ">
             <objects>
                 <navigationController id="vBL-zf-A8c" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Más" id="dNh-EE-K7s"/>
+                    <tabBarItem key="tabBarItem" title="Web Local" image="earth-america-7.png" id="dNh-EE-K7s"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tsJ-90-iKR">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -259,4 +278,9 @@
             <point key="canvasLocation" x="137.68115942028987" y="133.92857142857142"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="book-cover-7.png" width="30" height="30"/>
+        <image name="business-bag-7.png" width="30" height="30"/>
+        <image name="earth-america-7.png" width="30" height="30"/>
+    </resources>
 </document>
