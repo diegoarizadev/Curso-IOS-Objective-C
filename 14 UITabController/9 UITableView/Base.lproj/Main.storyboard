@@ -171,6 +171,55 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="133.92857142857142"/>
         </scene>
+        <!--Otra-->
+        <scene sceneID="G3B-7n-aS6">
+            <objects>
+                <viewController id="T6H-tL-hyV" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JTU-8z-TlP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="SB0-io-VUi"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Otra" id="scF-xe-s2P"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oGu-tB-3Q7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-665" y="879"/>
+        </scene>
+        <!--Más-->
+        <scene sceneID="zgg-Ub-izJ">
+            <objects>
+                <navigationController id="vBL-zf-A8c" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Más" id="dNh-EE-K7s"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tsJ-90-iKR">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="VBd-K3-esx" kind="relationship" relationship="rootViewController" id="B9H-xE-Erf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nHy-SN-79f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="255" y="919"/>
+        </scene>
+        <!--Más opciones-->
+        <scene sceneID="7Gi-tT-mYd">
+            <objects>
+                <viewController id="VBd-K3-esx" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rYG-mZ-v9Z">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="1D2-j0-VTM"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Más opciones" id="c4j-Xu-aPK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SVw-EQ-es0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1177" y="919"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="IRn-DH-eu9">
             <objects>
@@ -182,6 +231,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="Nos-09-Pty" kind="relationship" relationship="viewControllers" id="GSr-pT-tEE"/>
+                        <segue destination="vBL-zf-A8c" kind="relationship" relationship="viewControllers" id="TfY-hl-9b9"/>
+                        <segue destination="T6H-tL-hyV" kind="relationship" relationship="viewControllers" id="zs8-4z-mzl"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HB9-6l-Mee" userLabel="First Responder" sceneMemberID="firstResponder"/>
