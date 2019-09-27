@@ -15,6 +15,7 @@
 		1D8114031C1833950063C136 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D8114011C1833950063C136 /* LaunchScreen.storyboard */; };
 		1D81140E1C1833950063C136 /* Conversor_de_unidadesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D81140D1C1833950063C136 /* Conversor_de_unidadesTests.m */; };
 		1D8114191C1833950063C136 /* Conversor_de_unidadesUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8114181C1833950063C136 /* Conversor_de_unidadesUITests.m */; };
+		6C4EACCD233DB63E002E9BA3 /* Divisa.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4EACCC233DB63E002E9BA3 /* Divisa.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		1D8114141C1833950063C136 /* Conversor de unidadesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Conversor de unidadesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D8114181C1833950063C136 /* Conversor_de_unidadesUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Conversor_de_unidadesUITests.m; sourceTree = "<group>"; };
 		1D81141A1C1833950063C136 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C4EACCB233DB63E002E9BA3 /* Divisa.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Divisa.h; sourceTree = "<group>"; };
+		6C4EACCC233DB63E002E9BA3 /* Divisa.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Divisa.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,7 @@
 				1D8114011C1833950063C136 /* LaunchScreen.storyboard */,
 				1D8114041C1833950063C136 /* Info.plist */,
 				1D8113F31C1833950063C136 /* Supporting Files */,
+				6C4EACCE233DB652002E9BA3 /* Model */,
 			);
 			path = "Conversor de unidades";
 			sourceTree = "<group>";
@@ -138,6 +142,15 @@
 				1D81141A1C1833950063C136 /* Info.plist */,
 			);
 			path = "Conversor de unidadesUITests";
+			sourceTree = "<group>";
+		};
+		6C4EACCE233DB652002E9BA3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6C4EACCB233DB63E002E9BA3 /* Divisa.h */,
+				6C4EACCC233DB63E002E9BA3 /* Divisa.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,6 +236,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -273,6 +287,7 @@
 				1D8113FB1C1833950063C136 /* ViewController.m in Sources */,
 				1D8113F81C1833950063C136 /* AppDelegate.m in Sources */,
 				1D8113F51C1833950063C136 /* main.m in Sources */,
+				6C4EACCD233DB63E002E9BA3 /* Divisa.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
