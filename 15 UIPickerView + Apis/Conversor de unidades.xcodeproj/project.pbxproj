@@ -16,6 +16,7 @@
 		1D81140E1C1833950063C136 /* Conversor_de_unidadesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D81140D1C1833950063C136 /* Conversor_de_unidadesTests.m */; };
 		1D8114191C1833950063C136 /* Conversor_de_unidadesUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8114181C1833950063C136 /* Conversor_de_unidadesUITests.m */; };
 		6C4EACCD233DB63E002E9BA3 /* Divisa.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4EACCC233DB63E002E9BA3 /* Divisa.m */; };
+		6CB79418234444EC00DA2F2E /* Exchange.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CB79417234444EC00DA2F2E /* Exchange.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		1D81141A1C1833950063C136 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C4EACCB233DB63E002E9BA3 /* Divisa.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Divisa.h; sourceTree = "<group>"; };
 		6C4EACCC233DB63E002E9BA3 /* Divisa.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Divisa.m; sourceTree = "<group>"; };
+		6CB79416234444EC00DA2F2E /* Exchange.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Exchange.h; sourceTree = "<group>"; };
+		6CB79417234444EC00DA2F2E /* Exchange.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Exchange.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +117,8 @@
 				1D8114041C1833950063C136 /* Info.plist */,
 				1D8113F31C1833950063C136 /* Supporting Files */,
 				6C4EACCE233DB652002E9BA3 /* Model */,
+				6CB79416234444EC00DA2F2E /* Exchange.h */,
+				6CB79417234444EC00DA2F2E /* Exchange.m */,
 			);
 			path = "Conversor de unidades";
 			sourceTree = "<group>";
@@ -285,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D8113FB1C1833950063C136 /* ViewController.m in Sources */,
+				6CB79418234444EC00DA2F2E /* Exchange.m in Sources */,
 				1D8113F81C1833950063C136 /* AppDelegate.m in Sources */,
 				1D8113F51C1833950063C136 /* main.m in Sources */,
 				6C4EACCD233DB63E002E9BA3 /* Divisa.m in Sources */,

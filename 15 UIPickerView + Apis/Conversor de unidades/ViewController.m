@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "Divisa.h"
+#import "Exchange.h"
 
 @interface ViewController () {
     NSArray *pickerData;
@@ -94,10 +95,30 @@
 
 - (IBAction)buttonResult:(UIButton *)sender {
     
-
+    //Obtener las divisas seleccionadas.
+    long initRow = [self.pickerSelect selectedRowInComponent:0]; //retorna la selección del primer picker.
+    long lastRown= [self.pickerSelect selectedRowInComponent:1]; //retorna la segunda selección del segundo picker.
     
-    [self.labelResultadoConversion setText:@"Hay que programar la conversión!"];
+    NSLog(@"N0rf3n - buttonResult - initRow : %ld",initRow);
+    NSLog(@"N0rf3n - buttonResult - lastRown : %ld",lastRown);
+    
+    //Se instancian los objectos.
+    Divisa * fristDivisa = [pickerData objectAtIndex:initRow];
+    Divisa * lastDivisa = [pickerData objectAtIndex:lastRown];
+    
+    NSLog(@"N0rf3n - buttonResult - fristDivisa : %@",fristDivisa.nombre);
+    NSLog(@"N0rf3n - buttonResult - lastDivisa : %@",lastDivisa.nombre);
+    
+    float valor = [self.labelValue.text floatValue]; //Se recupera el valor digitado por el usuario y se convierte a float.
 
+    NSLog(@"N0rf3n - buttonResult - valor : %f",valor);
+    
+    float resultadoConversion = [Exchange changeCurrency:fristDivisa for:lastDivisa currencyValue:valor];//Se invoca al metodo changeCurrency
+    
+    [self.labelResultadoConversion setText:[NSString localizedStringWithFormat:@"%.1f %@ = %.1f %@", valor, fristDivisa.nombre, resultadoConversion, lastDivisa.nombre  ]];
+    
+    
+    
     
     result = true;
     
