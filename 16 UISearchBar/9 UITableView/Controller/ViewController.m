@@ -18,6 +18,7 @@
     BOOL  planetasCheck[9]; // se debe instancias el tamaño del arreglo.
     //2. crear el objecto privado para la clase.
     NSMutableArray * planetas;
+    UISearchController * searchController; //Se crea el objecto.
 }
 
 @end
@@ -88,6 +89,12 @@
     //ahora se debe crear el arreglo mutable.
     
     planetas = [[NSArray arrayWithObjects:mercurio,venus,tierra,luna,marte,jupiter,saturno,urano,neptuno,pluton, nil] mutableCopy];
+    
+    //inicializar el buscador.
+    searchController =[[UISearchController alloc] initWithSearchResultsController:nil];
+    [searchController.searchBar  sizeToFit]; //la barra de busqueda ocupara todo el espacio de la pantalla.
+    self.tablaPlanetas.tableHeaderView = searchController.searchBar; //se agrega la barra de busqueda a la tabla.
+    self.definesPresentationContext = YES;
 
 
 }
