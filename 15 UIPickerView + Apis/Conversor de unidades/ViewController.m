@@ -115,7 +115,21 @@
     
     float resultadoConversion = [Exchange changeCurrency:fristDivisa for:lastDivisa currencyValue:valor];//Se invoca al metodo changeCurrency
     
-    [self.labelResultadoConversion setText:[NSString localizedStringWithFormat:@"%.1f %@ = %.1f %@", valor, fristDivisa.nombre, resultadoConversion, lastDivisa.nombre  ]];
+    if (resultadoConversion == -1) {
+        
+         NSLog(@"N0rf3n - buttonResult - resultadoConversion/Error : %f",resultadoConversion);
+        
+        [self.labelResultadoConversion setText:@"Se ha generado un error, intentalo mañana.."];
+        
+    }else{
+        
+         NSLog(@"N0rf3n - buttonResult - resultadoConversion : %f",resultadoConversion);
+        
+        [self.labelResultadoConversion setText:[NSString localizedStringWithFormat:@"%.1f %@ = %.1f %@", valor, fristDivisa.nombre, resultadoConversion, lastDivisa.nombre  ]];
+        
+    }
+    
+    
     
     
     
