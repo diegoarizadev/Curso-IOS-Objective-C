@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController <UITableViewDataSource, UITableViewDelegate> //los obejctos entre los <> son delegados.
+@interface ViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UISearchResultsUpdating> //los obejctos entre los <> son delegados.
 
 @property (strong, nonatomic) IBOutlet UITableView *tablaPlanetas;
 

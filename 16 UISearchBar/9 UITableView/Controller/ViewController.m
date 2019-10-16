@@ -18,6 +18,7 @@
     BOOL  planetasCheck[9]; // se debe instancias el tamaño del arreglo.
     //2. crear el objecto privado para la clase.
     NSMutableArray * planetas;
+    NSArray * searchResultados; //alamacenara las variables buscadas.
     UISearchController * searchController; //Se crea el objecto.
 }
 
@@ -95,7 +96,8 @@
     [searchController.searchBar  sizeToFit]; //la barra de busqueda ocupara todo el espacio de la pantalla.
     self.tablaPlanetas.tableHeaderView = searchController.searchBar; //se agrega la barra de busqueda a la tabla.
     self.definesPresentationContext = YES;
-
+    searchController.searchResultsUpdater = self;// se asigna el propio delegado
+    searchController.obscuresBackgroundDuringPresentation = NO;//controa que el contenido que esta por debajao de la vista se difumine.
 
 }
 
@@ -105,7 +107,11 @@
 #pragma mark - Metodos del UITableViewDataSource
 -(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{ //definira el numero de filas que contendra la tabla.
     
-    return [planetas count];
+    if(searchController.active){ //si la barra del buscador esta activa
+        return searchResultados.count;
+    }else{
+        return [planetas count];
+    }
 
 }
 
@@ -114,11 +120,19 @@
     //en este metodo se puede acceder a dos variables ROW y SECTION con estas variables se identifica en que sección y esta y que fila se esta moviendo el usuario.
     
     NSInteger indice  = indexPath.row; //Se la posicion del planeta
+    
+    Planeta * currentPlanet;
  
     //se instancia estatico ya que las celdas se vna a reutilizar, estzs variable se utilizara en todo el hilo de la App
     static NSString * cellIdentifier = @"PlanetCell"; //Es un identificador estatico que no va a cambiar y hace referencia a la celda o ID de celda
+        
+    if(searchController.active){ //si la barra del buscador esta activa
+        currentPlanet = searchResultados[indice];
+    }else{
+        currentPlanet = planetas[indice]; //Recupera el planeta con el cual se va a trabajar
+    }
     
-    Planeta * currentPlanet = planetas[indice]; //Recupera el planeta con el cual se va a trabajar
+ 
     
     //Se utiliza para recuperar una tabla que se reutilizara del propio del UITableView
     PlanetCellTableView * cell = (PlanetCellTableView*)[tableView dequeueReusableCellWithIdentifier:cellIdentifier]; //aquí s recupera la celda.y modificar
@@ -208,13 +222,44 @@
     //si se tiene n Segues con una estructura de IF se podran controlar las acciones para cada uno.
     if ([segue.identifier isEqualToString:@"seguePlaneta"]) {
         NSIndexPath * indexPlaneta = [self.tablaPlanetas indexPathForSelectedRow]; //Se recupera el indexPath de la seleccion de la tabla
-        Planeta * planetaSegue = planetas[indexPlaneta.row]; //Se captura el planeta seleccionado
+        Planeta * planetaSegue;
         
+        if(searchController.active){ //si la barra del buscador esta activa
+            planetaSegue = searchResultados[indexPlaneta.row ];
+        }else{
+            planetaSegue = planetas[indexPlaneta.row]; //Se captura el planeta seleccionado
+        }
+
         //ahora se debe enviar la información al Destinatario o Viewcontroller del detalle.
         DetailViewController *dvc = segue.destinationViewController;
         dvc.planeta = planetaSegue; //Se le envia el objecto al viewcontroller.
     }
     
+}
+
+#pragma mark - MEtodos del UISearchController
+
+//metodo para filtrar la busqueda.
+-(void) filterContexFotSearchResult:(NSString*) searchText{
+    //Esta clase utiliaa el predicado, para filtrar el contenido.
+    
+    if(searchText.length > 0){ //se tiene longitud o se esta haciendo la busqueda
+        
+        NSPredicate * resultPredicado = [NSPredicate predicateWithFormat:@"nombre contains[c]%@",searchText];
+            searchResultados  = [planetas filteredArrayUsingPredicate:resultPredicado];
+       
+    }else{
+        searchResultados = planetas;
+
+    }
+    
+ }
+
+
+// Called when the search bar's text or scope has changed or when the search bar becomes first responder.
+- (void)updateSearchResultsForSearchController:(UISearchController *)theSearchController{
+    [self filterContexFotSearchResult:theSearchController.searchBar.text]; //recupera el texto digitado en la barra
+    [self.tablaPlanetas reloadData];//se recarga la tabla en la misma tableview de la app o vista.
 }
 
     @end
