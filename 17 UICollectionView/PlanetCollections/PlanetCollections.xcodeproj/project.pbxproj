@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C9C16962356D117006B4E9D /* PlanetCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C9C16952356D117006B4E9D /* PlanetCollectionViewController.m */; };
+		6C9C16992356D21C006B4E9D /* Planet.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C9C16972356D21C006B4E9D /* Planet.m */; };
 		6CCD762B2356C25F003CFE2D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CCD762A2356C25F003CFE2D /* AppDelegate.m */; };
 		6CCD762E2356C25F003CFE2D /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CCD762D2356C25F003CFE2D /* SceneDelegate.m */; };
 		6CCD76312356C25F003CFE2D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CCD76302356C25F003CFE2D /* ViewController.m */; };
@@ -14,9 +16,14 @@
 		6CCD76362356C263003CFE2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CCD76352356C263003CFE2D /* Assets.xcassets */; };
 		6CCD76392356C263003CFE2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CCD76372356C263003CFE2D /* LaunchScreen.storyboard */; };
 		6CCD763C2356C263003CFE2D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CCD763B2356C263003CFE2D /* main.m */; };
+		6CCD76442356CA2C003CFE2D /* PlanetCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CCD76432356CA2C003CFE2D /* PlanetCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6C9C16942356D117006B4E9D /* PlanetCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlanetCollectionViewController.h; sourceTree = "<group>"; };
+		6C9C16952356D117006B4E9D /* PlanetCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlanetCollectionViewController.m; sourceTree = "<group>"; };
+		6C9C16972356D21C006B4E9D /* Planet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Planet.m; sourceTree = "<group>"; };
+		6C9C16982356D21C006B4E9D /* Planet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Planet.h; sourceTree = "<group>"; };
 		6CCD76262356C25F003CFE2D /* PlanetCollections.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlanetCollections.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CCD76292356C25F003CFE2D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6CCD762A2356C25F003CFE2D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -29,6 +36,8 @@
 		6CCD76382356C263003CFE2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6CCD763A2356C263003CFE2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6CCD763B2356C263003CFE2D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6CCD76422356CA2C003CFE2D /* PlanetCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlanetCollectionViewCell.h; sourceTree = "<group>"; };
+		6CCD76432356CA2C003CFE2D /* PlanetCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlanetCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +70,8 @@
 		6CCD76282356C25F003CFE2D /* PlanetCollections */ = {
 			isa = PBXGroup;
 			children = (
+				6C9C16982356D21C006B4E9D /* Planet.h */,
+				6C9C16972356D21C006B4E9D /* Planet.m */,
 				6CCD76292356C25F003CFE2D /* AppDelegate.h */,
 				6CCD762A2356C25F003CFE2D /* AppDelegate.m */,
 				6CCD762C2356C25F003CFE2D /* SceneDelegate.h */,
@@ -72,6 +83,10 @@
 				6CCD76372356C263003CFE2D /* LaunchScreen.storyboard */,
 				6CCD763A2356C263003CFE2D /* Info.plist */,
 				6CCD763B2356C263003CFE2D /* main.m */,
+				6CCD76422356CA2C003CFE2D /* PlanetCollectionViewCell.h */,
+				6CCD76432356CA2C003CFE2D /* PlanetCollectionViewCell.m */,
+				6C9C16942356D117006B4E9D /* PlanetCollectionViewController.h */,
+				6C9C16952356D117006B4E9D /* PlanetCollectionViewController.m */,
 			);
 			path = PlanetCollections;
 			sourceTree = "<group>";
@@ -146,8 +161,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C9C16962356D117006B4E9D /* PlanetCollectionViewController.m in Sources */,
+				6C9C16992356D21C006B4E9D /* Planet.m in Sources */,
 				6CCD76312356C25F003CFE2D /* ViewController.m in Sources */,
 				6CCD762B2356C25F003CFE2D /* AppDelegate.m in Sources */,
+				6CCD76442356CA2C003CFE2D /* PlanetCollectionViewCell.m in Sources */,
 				6CCD763C2356C263003CFE2D /* main.m in Sources */,
 				6CCD762E2356C25F003CFE2D /* SceneDelegate.m in Sources */,
 			);
