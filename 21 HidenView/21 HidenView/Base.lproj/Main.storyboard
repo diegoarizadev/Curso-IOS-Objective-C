@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="_1_HidenView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GkB-bo-Rgo">
+                                <rect key="frame" x="0.5" y="0.0" width="413" height="896"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gUh-tj-jVh" userLabel="Azul">
+                                        <rect key="frame" x="72" y="61" width="269" height="36"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="hUu-ks-gba"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FtS-8P-ezT" userLabel="Naranja">
+                                        <rect key="frame" x="72" y="105" width="269" height="223"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="223" id="xVe-mQ-XFV"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NOx-Fc-Joc" userLabel="Verde">
+                                        <rect key="frame" x="72" y="336" width="269" height="128"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="128" id="vP7-kO-PGV"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZiN-MG-YAD">
+                                        <rect key="frame" x="175" y="485" width="65" height="30"/>
+                                        <state key="normal" title="Esconder"/>
+                                        <connections>
+                                            <action selector="Btnhidden:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v1b-W5-nXC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="gUh-tj-jVh" secondAttribute="trailing" constant="72" id="3cV-a8-rFr"/>
+                                    <constraint firstItem="FtS-8P-ezT" firstAttribute="leading" secondItem="GkB-bo-Rgo" secondAttribute="leading" constant="72" id="4VV-v8-0ny"/>
+                                    <constraint firstItem="FtS-8P-ezT" firstAttribute="top" secondItem="GkB-bo-Rgo" secondAttribute="top" constant="105" id="Bpm-mt-Vcc"/>
+                                    <constraint firstAttribute="trailing" secondItem="FtS-8P-ezT" secondAttribute="trailing" constant="72" id="Ns9-JI-hSn"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZiN-MG-YAD" secondAttribute="trailing" constant="173" id="P8N-nz-dpj"/>
+                                    <constraint firstItem="NOx-Fc-Joc" firstAttribute="top" secondItem="FtS-8P-ezT" secondAttribute="bottom" constant="8" id="WwO-XU-BLN"/>
+                                    <constraint firstItem="NOx-Fc-Joc" firstAttribute="leading" secondItem="GkB-bo-Rgo" secondAttribute="leading" constant="72" id="bDG-Mg-jCB"/>
+                                    <constraint firstItem="ZiN-MG-YAD" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="GkB-bo-Rgo" secondAttribute="leading" constant="20" symbolic="YES" id="bcU-47-j90"/>
+                                    <constraint firstItem="gUh-tj-jVh" firstAttribute="top" secondItem="GkB-bo-Rgo" secondAttribute="top" constant="61" id="eae-Dh-IZe"/>
+                                    <constraint firstItem="ZiN-MG-YAD" firstAttribute="top" secondItem="NOx-Fc-Joc" secondAttribute="bottom" constant="21" id="eou-z6-U2w"/>
+                                    <constraint firstAttribute="trailing" secondItem="NOx-Fc-Joc" secondAttribute="trailing" constant="72" id="kI7-3N-6RO"/>
+                                    <constraint firstItem="gUh-tj-jVh" firstAttribute="leading" secondItem="GkB-bo-Rgo" secondAttribute="leading" constant="72" id="yX8-WK-HUt"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="GkB-bo-Rgo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XjJ-mI-eLZ"/>
+                            <constraint firstItem="GkB-bo-Rgo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="aTs-PC-13i"/>
+                            <constraint firstItem="GkB-bo-Rgo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="0.5" id="ab7-Kk-wld"/>
+                            <constraint firstItem="GkB-bo-Rgo" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-44" id="xkX-Zb-kmJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="ViewGreen" destination="NOx-Fc-Joc" id="PTq-97-dkI"/>
+                        <outlet property="ViewOrange" destination="FtS-8P-ezT" id="jiC-Qm-iJd"/>
+                        <outlet property="Viewblue" destination="gUh-tj-jVh" id="Ylr-gt-hcy"/>
+                        <outlet property="btnEsconder" destination="ZiN-MG-YAD" id="lqJ-EM-Otx"/>
+                        <outlet property="test1" destination="xVe-mQ-XFV" id="RVw-5Z-hU6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="128.57142857142856"/>
+        </scene>
+    </scenes>
+</document>

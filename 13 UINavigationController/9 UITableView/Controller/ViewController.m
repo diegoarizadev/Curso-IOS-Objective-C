@@ -146,6 +146,7 @@
     return altura/8.7;//el valor 8.35 es la cantidad de celdas que ahora se mostraran en la pantalla ""response""
 }
 
+
 //Obtener la seleccion de la tabla.
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
