@@ -27,8 +27,17 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FtS-8P-ezT" userLabel="Naranja">
                                         <rect key="frame" x="72" y="105" width="269" height="223"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo_2019-09-26_10-24-06.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="myg-a7-bnO">
+                                                <rect key="frame" x="15" y="8" width="240" height="207"/>
+                                            </imageView>
+                                        </subviews>
                                         <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="myg-a7-bnO" secondAttribute="trailing" constant="14" id="Imq-nE-NQY"/>
+                                            <constraint firstItem="myg-a7-bnO" firstAttribute="leading" secondItem="FtS-8P-ezT" secondAttribute="leading" constant="15" id="LDd-oq-x3O"/>
+                                            <constraint firstItem="myg-a7-bnO" firstAttribute="top" secondItem="FtS-8P-ezT" secondAttribute="top" constant="8" id="P4x-2A-Uzf"/>
+                                            <constraint firstAttribute="bottom" secondItem="myg-a7-bnO" secondAttribute="bottom" constant="8" id="lVL-Hm-RsD"/>
                                             <constraint firstAttribute="height" constant="223" id="xVe-mQ-XFV"/>
                                         </constraints>
                                     </view>
@@ -86,4 +95,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="128.57142857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="photo_2019-09-26_10-24-06.jpg" width="640" height="640"/>
+    </resources>
 </document>

@@ -13,6 +13,7 @@
 		6C4BE8132379D72700A40DCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C4BE8112379D72700A40DCC /* Main.storyboard */; };
 		6C4BE8152379D72900A40DCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C4BE8142379D72900A40DCC /* Assets.xcassets */; };
 		6C4BE8182379D72900A40DCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C4BE8162379D72900A40DCC /* LaunchScreen.storyboard */; };
+		6C4BE820237A08CA00A40DCC /* photo_2019-09-26_10-24-06.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6C4BE81F237A08CA00A40DCC /* photo_2019-09-26_10-24-06.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		6C4BE8142379D72900A40DCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C4BE8172379D72900A40DCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C4BE8192379D72900A40DCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C4BE81F237A08CA00A40DCC /* photo_2019-09-26_10-24-06.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo_2019-09-26_10-24-06.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				6C4BE80F2379D72700A40DCC /* ViewController.swift */,
 				6C4BE8112379D72700A40DCC /* Main.storyboard */,
 				6C4BE8142379D72900A40DCC /* Assets.xcassets */,
+				6C4BE81F237A08CA00A40DCC /* photo_2019-09-26_10-24-06.jpg */,
 				6C4BE8162379D72900A40DCC /* LaunchScreen.storyboard */,
 				6C4BE8192379D72900A40DCC /* Info.plist */,
 			);
@@ -127,6 +130,7 @@
 			files = (
 				6C4BE8182379D72900A40DCC /* LaunchScreen.storyboard in Resources */,
 				6C4BE8152379D72900A40DCC /* Assets.xcassets in Resources */,
+				6C4BE820237A08CA00A40DCC /* photo_2019-09-26_10-24-06.jpg in Resources */,
 				6C4BE8132379D72700A40DCC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
